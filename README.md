@@ -26,6 +26,10 @@
     <td>
       Bu sayfada menü Adobe Photoshop ile tasarlanmıştır.Sayfalar arası geçiş yapılması için seçeneklere tek tek link verilmiştir. Ürünler, Masalar, Sipariş Ver, Sipariş Detay ve Personellere bu sayfadan erişilir. 
 Kilitle seçeneği ile sayfadan çıkış yapılır ve giriş sayfasına gider. Çıkış seçeneği ile uygulama tamamen kapatılır.
+ 
+<br />
+ 
+<br />
     </td>
  </tr>
  <tr>
@@ -34,7 +38,10 @@ Kilitle seçeneği ile sayfadan çıkış yapılır ve giriş sayfasına gider. 
   <tr>
     <td>
       Bu sayfada veritabanı ndan çekilen ürünlerin kaydı tutulur.Ürün silebilir ve silmeden önce “Silmek istediğinizden emin misiniz?” diye uyarı verilir,onay verilirse ürün silinir. Yeni ürün ekleyebilir ve ürünü güncelleyebilir.
+      <br />
+      <br />
     </td>
+  
  </tr>
  <tr>
     <td><img src="https://github.com/mahirkursun/CafeOtomasyon/blob/main/img/Picture4.png" alt="Your image title" /></td>
@@ -42,6 +49,8 @@ Kilitle seçeneği ile sayfadan çıkış yapılır ve giriş sayfasına gider. 
   <tr>
     <td>
       Bu sayfada ürünlerde seçili olan ürünün güncellemesi yapılır.Ürün Güncelle butonuna basıldığında ürünler tablosu yenilenir.
+      <br />
+      <br />
    </td>
  </tr>
  <tr>
@@ -50,6 +59,8 @@ Kilitle seçeneği ile sayfadan çıkış yapılır ve giriş sayfasına gider. 
   <tr>
     <td>
       Ürünler sayfasında yeni ürün ekle butonuna basıldığında bu sayfa açılır. Bu sayfa ürün eklerken önce ürün için resim eklenir, gerekli bilgiler yazılır, kategori kısmında 3 seçenekten (Yemek, İçecek, Tatlı) biri seçilir ve ürün ürünler tablosuna eklenir.
+      <br />
+      <br />
     </td>
  </tr>
  <tr>
@@ -58,6 +69,8 @@ Kilitle seçeneği ile sayfadan çıkış yapılır ve giriş sayfasına gider. 
   <tr>
     <td>
       Kullanıcı bu sayfada hangi masa sipariş istemişse o masayı seçerek, seçtiği masaya sipariş eklemek için Sipariş Ver sayfasına gider. Ve seçilen Masa No Sipariş Ver sayfasında kayıtlı olur. 
+      <br />
+      <br />
     </td>
  </tr>
  <tr>
@@ -66,6 +79,8 @@ Kilitle seçeneği ile sayfadan çıkış yapılır ve giriş sayfasına gider. 
  <tr>
     <td>
       Bu sayfadaki cafede çalışan personellerin listesi listelenir, Personel silme yapılır. Çıkış butonu ile sayfadan çıkış yapılır.
+      <br />
+      <br />
     </td>
  </tr>
  <tr>
@@ -74,6 +89,8 @@ Kilitle seçeneği ile sayfadan çıkış yapılır ve giriş sayfasına gider. 
  <tr>
     <td>
       Sistemde verilerin tutulması ve işlenmesi için veri tabanı kullanılmaktadır. Veri tabanında 6 tablo bulunmaktadır.
+      <br />
+      <br />
     </td>
  </tr>
  
