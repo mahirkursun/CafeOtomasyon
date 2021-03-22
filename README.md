@@ -24,7 +24,7 @@
  </tr>
   <tr>
     <td>
-      Bu sayfada menü Adobe Photoshop ile tasarlanmıştır.Sayfalar arası geçiş yapılması için seçeneklere tek tek link verilmiştir. Ürünler, Masalar, Sipariş Ver, Sipariş Detay ve Personellere bu sayfadan erişilir. 
+      Bu sayfada menü Adobe Photoshop ile tasarlanmıştır. Sayfalar arası geçiş yapılması için seçeneklere tek tek link verilmiştir. Ürünler, Masalar, Sipariş Ver, Sipariş Detay ve Personellere bu sayfadan erişilir. 
 Kilitle seçeneği ile sayfadan çıkış yapılır ve giriş sayfasına gider. Çıkış seçeneği ile uygulama tamamen kapatılır.
  
 <br />
@@ -37,7 +37,7 @@ Kilitle seçeneği ile sayfadan çıkış yapılır ve giriş sayfasına gider. 
  </tr>
   <tr>
     <td>
-      Bu sayfada veritabanı ndan çekilen ürünlerin kaydı tutulur.Ürün silebilir ve silmeden önce “Silmek istediğinizden emin misiniz?” diye uyarı verilir,onay verilirse ürün silinir. Yeni ürün ekleyebilir ve ürünü güncelleyebilir.
+      Bu sayfada veritabanı ndan çekilen ürünlerin kaydı tutulur.Ürün silebilir ve silmeden önce “Silmek istediğinizden emin misiniz?” diye uyarı verilir, onay verilirse ürün silinir. Yeni ürün ekleyebilir ve ürünü güncelleyebilir.
       <br />
       <br />
     </td>
@@ -48,7 +48,7 @@ Kilitle seçeneği ile sayfadan çıkış yapılır ve giriş sayfasına gider. 
  </tr>
   <tr>
     <td>
-      Bu sayfada ürünlerde seçili olan ürünün güncellemesi yapılır.Ürün Güncelle butonuna basıldığında ürünler tablosu yenilenir.
+      Bu sayfada ürünlerde seçili olan ürünün güncellemesi yapılır. Ürün Güncelle butonuna basıldığında ürünler tablosu yenilenir.
       <br />
       <br />
    </td>
