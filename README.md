@@ -26,5 +26,6 @@
  </tr>
  <tr>
     <td><img src="https://github.com/mahirkursun/CafeOtomasyon/blob/main/img/screenshot7.JPG" alt="Your image title" /></td>
+ </tr>
 </table>
 
