@@ -13,6 +13,10 @@
  <tr>
     <td>
       Kullanıcı adı ve şifrenin girilerek Giriş Yap butonuna tıklanması ile o kullanıcı adı ve şifreye ait bir kullanıcı veritabanı nda kontrol edilir, yok ise hata mesajı gösterir, var ise Anasayfa ya geçiş yapılır.
+ 
+<br />
+ 
+<br />
     </td>
  </tr>
  <tr>
