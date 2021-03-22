@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "Cafe Mahir";
+    Layout = "~/Views/Paylas/_GirisLayout.cshtml";
+
+}
+
+<section id="main-content">
+    <section class="wrapper">
+        <link rel="stylesheet" href="~/Icerik/Giris/css/style.css" />  
+        <div class="wthree-form">
+            <div class="login form">
+
+                <form action="Verify" method="post">
+                    <div>
+                        <input type="text" name="kulAd" placeholder="kulAd" required="" />
+                    </div>
+                    <div >
+                        <input type="password" name="sifre" placeholder="sifre" required="" />
+                    </div>
+                    
+                    <div>
+                        <input type="submit" value="Giris">
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+        
+    </section>
+</section>

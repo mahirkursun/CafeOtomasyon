@@ -1,0 +1,91 @@
+﻿@model CafeOtomasyon.Models.Entity.Siparis
+@{
+    ViewBag.Title = "Siparişler";
+    Layout = null;
+
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Siparişler</title>
+    <link rel="stylesheet" href="~/Icerik/Siparis/css/style.css" />
+</head>
+<body>
+    <header>
+        <a href="~/Admin/Index">
+            <img style="height:530px;width:800px; margin-top:-130px; position:relative;margin-left:760px;" src="~/Icerik/Admin/img/baslik.png" />
+        </a>
+    </header>
+
+    <section id="main-content">
+        <section class="wrapper">
+
+
+            <div class="form2">
+
+
+
+                <form method="post" action="/Siparisler/YeniSatis">
+                    <div class="yenisatisform">
+                        <center>
+                            @Html.ActionLink("Sipariş Ver", "Index", null, new { @class = "indbaslik" })
+                        </center>
+                        <hr />
+
+                        <label>Ürün Adı</label>
+                        <br />
+
+                        @Html.DropDownList("siparisUrun", (IEnumerable<SelectListItem>)ViewData["Urun"], "Ürünü Seçiniz", new { @class = "satisicerik1" })
+
+
+                        <br />
+
+
+                        <label>Ürün Adet</label>
+                        <br />
+                        @Html.TextBoxFor(m => m.siparisAdet, new { @class = "satisicerik1" })
+                        <br />
+
+
+                        <label>Sipariş Zamanı </label>
+                        <br />
+                        @Html.TextBoxFor(m => m.siparisZaman, new { @class = "satisicerik1" })
+                        <br />
+
+                        <label> Masa No</label>
+                        <br />
+
+
+
+                        <select class="satisicerik1" data-val="true" data-val-number="siparisMasa alanı bir sayı olmalıdır." id="siparisMasa" name="siparisMasa">
+                            <option value="4">4</option>
+                        </select>
+
+                        <br />
+                        <label>Sipariş Durum </label>
+                        <br />
+                        @Html.TextBoxFor(m => m.siparisDurum, new { @class = "satisicerik1" })
+                        <br />
+                        <label>Fiyat</label>
+                        <br />
+                        @Html.TextBoxFor(m => m.siparisFiyat, new { @class = "satisicerik1" })
+                        <br />
+                        <button type="submit" class="satiseklebuton" onclick="return confirm('Kaydetmek İstiyor Musunuz?')">Siparişi Kaydet</button>
+                        <hr />
+                        <a href="~/Admin"><button formacti type="button" class="iptalbuton" data-dismiss="modal">Sipariş İptal</button></a>
+                    </div>
+                </form>
+            </div>
+
+
+        </section>
+    </section>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="e950ba38eed44aa1a5f7b4de5966b750" Name="Diagram1" ZoomLevel="98">
+        <EntityTypeShape EntityType="cafedbModel1.Giris" Width="1.5" PointX="0.5" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="cafedbModel1.Kategori" Width="1.5" PointX="2.625" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="cafedbModel1.Masa" Width="1.5" PointX="5.125" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="cafedbModel1.Personel" Width="1.5" PointX="2.625" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="cafedbModel1.Siparis" Width="1.5" PointX="7.75" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="cafedbModel1.sysdiagrams" Width="1.5" PointX="0.5" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="cafedbModel1.Urun" Width="1.5" PointX="5" PointY="0.625" IsExpanded="true" />
+        <AssociationConnector Association="cafedbModel1.KategoriUrun" />
+        <AssociationConnector Association="cafedbModel1.UrunSiparis" />
+        <AssociationConnector Association="cafedbModel1.MasaSiparis" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

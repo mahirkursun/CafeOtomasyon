@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+
+    <link rel="stylesheet" href="~/Icerik/Admin/css/style.css" />
+    
+
+</head>
+<body >
+    <header>
+        <a href="~/Admin/Index">
+            <img style="height:530px;width:800px; margin-top:-130px; position:relative;margin-left:760px;" src="~/Icerik/Admin/img/baslik.png" />
+        </a>
+    </header>
+
+    <table class="table" border="0" align="center">
+        <tr>
+            <td colspan="2" width="539px" height=""><a href="~/Admin/Index"><img src="~/Icerik/Admin/img/Anasayfa.jpg" /></a></td>
+            <td width="219px" height="219px"><a href="~/Urun/index"><img src="~/Icerik/Admin/img/Urunler.jpg" /></a></td>
+            <td width="219px"><a href="~/Masa/Index"><img src="~/Icerik/Admin/img/Masalar.jpg" /></a></td>
+        </tr>
+        <tr>
+            <td width="219px"><a href="~/Siparisler/Index"><img src="~/Icerik/Admin/img/Siparisver.jpg" /></a></td>
+            <td width="219px"><a href="~/SiparisDetay/Index"><img src="~/Icerik/Admin/img/Siparisdetay.jpg" /></a></td>
+            <td colspan="2" width="539px"><a href="~/Personel/Index"><img src="~/Icerik/Admin/img/Personeller.jpg" /></a></td>
+
+        </tr>
+        <tr>
+            <td colspan="2"><a href="~/Giris/Index"><img src="~/Icerik/Admin/img/Kilitle.jpg" /></a></td>
+            <td colspan="2"><a href="javascript:window.close()"><img src="~/Icerik/Admin/img/Cikis.jpg" /></a></td>
+
+
+        </tr>
+
+    </table>
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>

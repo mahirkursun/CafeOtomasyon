@@ -1,0 +1,149 @@
+﻿/*Siparis style.css*/
+
+body {
+    background: url(../img/background.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+
+
+.form2 {
+    max-width: 500px;
+    width: 95%;
+    margin: 0 auto;
+    position: relative;
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    font-weight: 100;
+    font-size: 24px;
+    line-height: 30px;
+    color: #777;
+}
+
+.yenisatisform {
+    background: #F9F9F9;
+    padding: 40px;
+    margin: -140px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    border-radius: 20px;
+    margin-top: -218px;
+}
+
+    .yenisatisform .satisicerik1 {
+        background: #F9F9F9;
+        padding: 25px;
+        margin: 150px 0;
+        box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+        width: 95%;
+        border: 1px solid #ccc;
+        background: #FFF;
+        margin: 0 0 5px;
+        padding: 10px;
+        border-radius: 15px;
+        font-family: "Roboto", Helvetica, Arial, sans-serif;
+        font-weight: 100;
+        font-size: 24px;
+        line-height: 30px;
+        color: #0E1119;
+    }
+
+        .yenisatisform .satisicerik1:hover {
+            -webkit-transition: border-color 0.3s ease-in-out;
+            -moz-transition: border-color 0.3s ease-in-out;
+            transition: border-color 0.3s ease-in-out;
+            border: 1px solid #aaa;
+        }
+
+.satiseklebuton {
+    cursor: pointer;
+    width: 95%;
+    border: none;
+    background: #4CAF50;
+    color: #FFF;
+    margin: 15px 0 0;
+    padding: 10px;
+    border-radius: 15px;
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    font-weight: 100;
+    font-size: 24px;
+    line-height: 30px;
+    color: #0E1119;
+}
+
+    .satiseklebuton:hover {
+        background: #43A047;
+        -webkit-transition: background 0.3s ease-in-out;
+        -moz-transition: background 0.3s ease-in-out;
+        transition: background-color 0.3s ease-in-out;
+    }
+
+    .satiseklebuton:active {
+        box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+    }
+
+.iptalbuton {
+    cursor: pointer;
+    width: 95%;
+    border: none;
+    text-decoration: none;
+    background: #db7b06;
+    color: #FFF;
+    padding: 10px;
+    border-radius: 15px;
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    font-weight: 100;
+    font-size: 24px;
+    line-height: 30px;
+    color: #0E1119;
+}
+
+    .iptalbuton:hover {
+        background: #ffa400;
+        -webkit-transition: background 0.3s ease-in-out;
+        -moz-transition: background 0.3s ease-in-out;
+        transition: background-color 0.3s ease-in-out;
+    }
+
+    .iptalbuton:active {
+        box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+    }
+.satisbaslik{
+    margin-top:-35px;
+}
+
+.geridonbuton {
+    cursor: pointer;
+    width: 95%;
+    border: none;
+    background: #d9910f;
+    color: #FFF;
+    margin: 15px 0 0;
+    padding: 10px;
+    border-radius: 15px;
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    font-weight: 100;
+    font-size: 24px;
+    line-height: 30px;
+    color: #0E1119;
+    text-decoration: none;
+}
+
+    .geridonbuton:hover {
+        background: #F8B500;
+        -webkit-transition: background 0.3s ease-in-out;
+        -moz-transition: background 0.3s ease-in-out;
+        transition: background-color 0.3s ease-in-out;
+    }
+
+    .geridonbuton:active {
+        box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+    }
+.indbaslik {
+    cursor: pointer;
+    border: none;
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    font-size: 30px;
+    color: #0E1119;
+    text-decoration: none;
+}

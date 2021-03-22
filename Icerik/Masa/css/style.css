@@ -1,0 +1,11 @@
+﻿/*Masa style.css*/
+
+body {
+    background: url(../img/background.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    
+}
+.tablemasa{
+    margin-top:-60px;
+}

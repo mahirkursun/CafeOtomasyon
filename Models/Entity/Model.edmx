@@ -1,0 +1,322 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="cafedbModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Giris">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="kulAd" Type="nvarchar" MaxLength="50" />
+          <Property Name="sifre" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Kategori">
+          <Key>
+            <PropertyRef Name="kategoriID" />
+          </Key>
+          <Property Name="kategoriID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="kategoriAd" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Masa">
+          <Key>
+            <PropertyRef Name="masaID" />
+          </Key>
+          <Property Name="masaID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="masaDurum" Type="bit" />
+        </EntityType>
+        <EntityType Name="Personel">
+          <Key>
+            <PropertyRef Name="personelID" />
+          </Key>
+          <Property Name="personelID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="personelAd" Type="nvarchar" MaxLength="50" />
+          <Property Name="personelSoyad" Type="nvarchar" MaxLength="50" />
+          <Property Name="personelTelefon" Type="nvarchar" MaxLength="50" />
+          <Property Name="personelBolum" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Siparis">
+          <Key>
+            <PropertyRef Name="siparisID" />
+          </Key>
+          <Property Name="siparisID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="siparisUrun" Type="int" />
+          <Property Name="siparisIsim" Type="nvarchar" MaxLength="50" />
+          <Property Name="siparisAdet" Type="nvarchar" MaxLength="50" />
+          <Property Name="siparisZaman" Type="datetime" />
+          <Property Name="siparisMasa" Type="int" />
+          <Property Name="siparisDurum" Type="nvarchar" MaxLength="50" />
+          <Property Name="siparisFiyat" Type="int" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="Urun">
+          <Key>
+            <PropertyRef Name="urunID" />
+          </Key>
+          <Property Name="urunID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="urunResim" Type="nvarchar" MaxLength="50" />
+          <Property Name="urunAdi" Type="nvarchar" MaxLength="50" />
+          <Property Name="urunAyrinti" Type="nvarchar" MaxLength="50" />
+          <Property Name="urunKategori" Type="int" />
+          <Property Name="urunUcret" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="urunStok" Type="int" />
+        </EntityType>
+        <EntityContainer Name="cafedbModel1StoreContainer">
+          <EntitySet Name="Giris" EntityType="Self.Giris" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Kategori" EntityType="Self.Kategori" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Masa" EntityType="Self.Masa" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Personel" EntityType="Self.Personel" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Siparis" EntityType="Self.Siparis" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Urun" EntityType="Self.Urun" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="cafedbModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Giris">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="kulAd" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="sifre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Kategori">
+          <Key>
+            <PropertyRef Name="kategoriID" />
+          </Key>
+          <Property Name="kategoriID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="kategoriAd" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Urun" Relationship="cafedbModel1.KategoriUrun" FromRole="Kategori" ToRole="Urun" />
+        </EntityType>
+        <EntityType Name="Masa">
+          <Key>
+            <PropertyRef Name="masaID" />
+          </Key>
+          <Property Name="masaID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="masaDurum" Type="Boolean" />
+          <NavigationProperty Name="Siparis" Relationship="cafedbModel1.MasaSiparis" FromRole="Masa" ToRole="Siparis" />
+        </EntityType>
+        <EntityType Name="Personel">
+          <Key>
+            <PropertyRef Name="personelID" />
+          </Key>
+          <Property Name="personelID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="personelAd" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="personelSoyad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="personelTelefon" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="personelBolum" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Siparis">
+          <Key>
+            <PropertyRef Name="siparisID" />
+          </Key>
+          <Property Name="siparisID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="siparisUrun" Type="Int32" />
+          <Property Name="siparisIsim" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="siparisAdet" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="siparisZaman" Type="DateTime" Precision="3" />
+          <Property Name="siparisMasa" Type="Int32" />
+          <Property Name="siparisDurum" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="siparisFiyat" Type="Int32" />
+          <NavigationProperty Name="Urun" Relationship="cafedbModel1.UrunSiparis" FromRole="Siparis" ToRole="Urun" />
+          <NavigationProperty Name="Masa" Relationship="cafedbModel1.MasaSiparis" FromRole="Siparis" ToRole="Masa" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Urun">
+          <Key>
+            <PropertyRef Name="urunID" />
+          </Key>
+          <Property Name="urunID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="urunResim" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="urunAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="urunAyrinti" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="urunKategori" Type="Int32" />
+          <Property Name="urunUcret" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="urunStok" Type="Int32" />
+          <NavigationProperty Name="Kategori" Relationship="cafedbModel1.KategoriUrun" FromRole="Urun" ToRole="Kategori" />
+          <NavigationProperty Name="Siparis" Relationship="cafedbModel1.UrunSiparis" FromRole="Urun" ToRole="Siparis" />
+        </EntityType>
+        <EntityContainer Name="cafedbEntities16" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Giris" EntityType="Self.Giris" />
+          <EntitySet Name="Kategori" EntityType="Self.Kategori" />
+          <EntitySet Name="Masa" EntityType="Self.Masa" />
+          <EntitySet Name="Personel" EntityType="Self.Personel" />
+          <EntitySet Name="Siparis" EntityType="Self.Siparis" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+          <EntitySet Name="Urun" EntityType="Self.Urun" />
+          <AssociationSet Name="KategoriUrun" Association="cafedbModel1.KategoriUrun">
+            <End Role="Kategori" EntitySet="Kategori" />
+            <End Role="Urun" EntitySet="Urun" />
+          </AssociationSet>
+          <AssociationSet Name="UrunSiparis" Association="cafedbModel1.UrunSiparis">
+            <End Role="Urun" EntitySet="Urun" />
+            <End Role="Siparis" EntitySet="Siparis" />
+          </AssociationSet>
+          <AssociationSet Name="MasaSiparis" Association="cafedbModel1.MasaSiparis">
+            <End Role="Masa" EntitySet="Masa" />
+            <End Role="Siparis" EntitySet="Siparis" />
+          </AssociationSet>
+        </EntityContainer>
+        <Association Name="KategoriUrun">
+          <End Type="cafedbModel1.Kategori" Role="Kategori" Multiplicity="0..1" />
+          <End Type="cafedbModel1.Urun" Role="Urun" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Kategori">
+              <PropertyRef Name="kategoriID" />
+            </Principal>
+            <Dependent Role="Urun">
+              <PropertyRef Name="urunKategori" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="UrunSiparis">
+          <End Type="cafedbModel1.Urun" Role="Urun" Multiplicity="0..1" />
+          <End Type="cafedbModel1.Siparis" Role="Siparis" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Urun">
+              <PropertyRef Name="urunID" />
+            </Principal>
+            <Dependent Role="Siparis">
+              <PropertyRef Name="siparisUrun" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="MasaSiparis">
+          <End Type="cafedbModel1.Masa" Role="Masa" Multiplicity="0..1" />
+          <End Type="cafedbModel1.Siparis" Role="Siparis" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Masa">
+              <PropertyRef Name="masaID" />
+            </Principal>
+            <Dependent Role="Siparis">
+              <PropertyRef Name="siparisMasa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="cafedbModel1StoreContainer" CdmEntityContainer="cafedbEntities16">
+          <EntitySetMapping Name="Giris">
+            <EntityTypeMapping TypeName="cafedbModel1.Giris">
+              <MappingFragment StoreEntitySet="Giris">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="kulAd" ColumnName="kulAd" />
+                <ScalarProperty Name="sifre" ColumnName="sifre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Kategori">
+            <EntityTypeMapping TypeName="cafedbModel1.Kategori">
+              <MappingFragment StoreEntitySet="Kategori">
+                <ScalarProperty Name="kategoriID" ColumnName="kategoriID" />
+                <ScalarProperty Name="kategoriAd" ColumnName="kategoriAd" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Masa">
+            <EntityTypeMapping TypeName="cafedbModel1.Masa">
+              <MappingFragment StoreEntitySet="Masa">
+                <ScalarProperty Name="masaID" ColumnName="masaID" />
+                <ScalarProperty Name="masaDurum" ColumnName="masaDurum" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Personel">
+            <EntityTypeMapping TypeName="cafedbModel1.Personel">
+              <MappingFragment StoreEntitySet="Personel">
+                <ScalarProperty Name="personelID" ColumnName="personelID" />
+                <ScalarProperty Name="personelAd" ColumnName="personelAd" />
+                <ScalarProperty Name="personelSoyad" ColumnName="personelSoyad" />
+                <ScalarProperty Name="personelTelefon" ColumnName="personelTelefon" />
+                <ScalarProperty Name="personelBolum" ColumnName="personelBolum" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Siparis">
+            <EntityTypeMapping TypeName="cafedbModel1.Siparis">
+              <MappingFragment StoreEntitySet="Siparis">
+                <ScalarProperty Name="siparisID" ColumnName="siparisID" />
+                <ScalarProperty Name="siparisUrun" ColumnName="siparisUrun" />
+                <ScalarProperty Name="siparisIsim" ColumnName="siparisIsim" />
+                <ScalarProperty Name="siparisAdet" ColumnName="siparisAdet" />
+                <ScalarProperty Name="siparisZaman" ColumnName="siparisZaman" />
+                <ScalarProperty Name="siparisMasa" ColumnName="siparisMasa" />
+                <ScalarProperty Name="siparisDurum" ColumnName="siparisDurum" />
+                <ScalarProperty Name="siparisFiyat" ColumnName="siparisFiyat" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="cafedbModel1.sysdiagrams">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Urun">
+            <EntityTypeMapping TypeName="cafedbModel1.Urun">
+              <MappingFragment StoreEntitySet="Urun">
+                <ScalarProperty Name="urunID" ColumnName="urunID" />
+                <ScalarProperty Name="urunResim" ColumnName="urunResim" />
+                <ScalarProperty Name="urunAdi" ColumnName="urunAdi" />
+                <ScalarProperty Name="urunAyrinti" ColumnName="urunAyrinti" />
+                <ScalarProperty Name="urunKategori" ColumnName="urunKategori" />
+                <ScalarProperty Name="urunUcret" ColumnName="urunUcret" />
+                <ScalarProperty Name="urunStok" ColumnName="urunStok" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

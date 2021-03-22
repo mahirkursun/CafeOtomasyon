@@ -1,0 +1,380 @@
+/* Ürün style.css */
+
+body {
+    background: url(../img/background.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    
+}
+
+
+/*Ürün ekleme butonu*/
+.eklebuton{
+    margin-top:0px;
+}
+
+
+/*Ürünler tablosu*/
+
+table {
+    /* 140px * 5 column + 16px scrollbar width */
+    border-spacing: 5px;
+    border: 0px solid white;
+    text-align: center;
+    margin-top: -195px;
+
+}
+
+table tbody,
+table thead tr {
+    display: block;
+
+}
+
+table tbody {
+    height: 530px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    color:white;
+}
+
+table thead th {
+    width: 175px;
+    height: 55px;
+    border-right: 0px solid black;
+}
+
+table tbody td {
+    width: 175px;
+    
+    border-right: 0px solid black;
+   
+}
+
+
+table thead th:last-child {
+    width: 175px; /* 140px + 16px scrollbar width */
+            
+}
+
+tbody {
+    border-top: 0px solid black;
+}
+
+tbody tr td img {
+    border:0px solid #999;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    padding-top:7px;
+    box-shadow:5px 5px 5px black;
+}
+/*ürünler tablosu içerik*/
+
+
+.container td {
+    font-weight: normal;
+    
+    -webkit-box-shadow: 0 2px 2px 2px #0E1119;
+    -moz-box-shadow: 0 2px 2px 2px #0E1119;
+    box-shadow: 0 2px 2px 2px #0E1119;
+    border-radius: 10px;
+    
+}
+
+.container {
+	
+	overflow: hidden;
+	width: 71%;
+	margin: 0 auto;
+    margin-top:-10px;
+    
+    font-family:'Segoe Print';
+    font-size:18px;
+}
+
+
+/* Background-color of the odd rows */
+    .container tr:nth-child(odd) {
+        background-color: #0099ff;
+        opacity: 0.8;
+    }
+
+/* Background-color of the even rows */
+    .container tr:nth-child(even) {
+        background-color: #51b9ff;
+        opacity: 0.8;
+    }
+
+
+.container td:first-child { 
+     color: #FB667A; 
+     
+
+}
+.container tr:hover {
+    background-color: #4c9b00;
+    -webkit-box-shadow: 0 6px 6px -6px #0E1119;
+    -moz-box-shadow: 0 6px 6px -6px #0E1119;
+    box-shadow: 0 6px 6px -6px #0E1119;
+}
+.container td:hover {
+    background-color: #FFF842;
+    color: #403E10;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: #7F7C21 -1px 1px, #7F7C21 -2px 2px, #7F7C21 -3px 3px, #7F7C21 -4px 4px, #7F7C21 -5px 5px, #7F7C21 -6px 6px;
+    transform: translate3d(6px, -6px, 0);
+    transition-delay: 0s;
+    transition-duration: 0.4s;
+    transition-property: all;
+    transition-timing-function: line;
+}
+
+.container2 {
+    
+    overflow: hidden;
+    width: 71%;
+    margin: 0 auto;
+    margin-top: -210px;
+    
+    display: table;
+    font-family:'Segoe Print';
+    font-size:24px;
+    color:#fff;
+   
+}
+
+.container2 td, .container2 th {
+    padding-bottom: 2%;
+    padding-top: 2%;
+    text-align:center;
+    border-radius:22px;
+}
+.container2 th:nth-child(odd) {
+    background-color: #F8B500;
+    opacity: 0.8;
+}
+.container2 th:nth-child(even) {
+    background-color: #F8B500;
+    opacity: 0.8;
+}
+.guncellelink{
+    text-decoration:none;
+    color:#fff;
+    
+}
+.guncellelink:hover{
+    color:black;
+}
+.sillink {
+    text-decoration: none;
+    color: #fff;
+}
+.sillink:hover{
+    color:red;
+}
+
+.container3 {
+   
+    
+    margin-top:-18px;
+    position:center;
+    position:fixed;
+    margin-left:343px;
+  
+}
+
+.container3 tr td img {
+    
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+   margin-right:14px;
+    box-shadow: 5px 5px 5px black;
+   
+}
+
+/*güncelle sayfasý*/
+.guncelleform {
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    font-weight: 100;
+    font-size: 24px;
+    line-height: 30px;
+    color: #777;
+}
+.containerguncelle {
+    
+    background: #F9F9F9;
+    padding: 40px;
+    margin: -140px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    border-radius:20px;
+    margin-top:-200px;
+}
+
+.containerguncelle .urunicerik {
+    background: #F9F9F9;
+    padding: 25px;
+    margin: 150px 0;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    width: 95%;
+    border: 1px solid #ccc;
+    background: #FFF;
+    margin: 0 0 5px;
+    padding: 10px;
+
+    border-radius:15px;
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    font-weight: 100;
+    font-size: 24px;
+    line-height: 30px;
+    color: #0E1119;
+}
+
+
+.containerguncelle .urunicerik:hover {
+    -webkit-transition: border-color 0.3s ease-in-out;
+    -moz-transition: border-color 0.3s ease-in-out;
+    transition: border-color 0.3s ease-in-out;
+    border: 1px solid #aaa;
+}
+
+.guncellebuton {
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    background: #4CAF50;
+    color: #FFF;
+    margin: 15px 0 0;
+    padding: 10px;
+   border-radius:15px;
+
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    font-weight: 100;
+    font-size: 24px;
+    line-height: 30px;
+    color: #0E1119;
+}
+.guncellebuton:hover {
+    background: #43A047;
+    -webkit-transition: background 0.3s ease-in-out;
+    -moz-transition: background 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out;
+}
+.guncellebuton:active {
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+
+/*Yeni ürün sayfasý*/
+
+.form1 {
+    max-width: 500px;
+    width: 95%;
+    margin:0 auto;
+    position: relative;
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    font-weight: 100;
+    font-size: 24px;
+    line-height: 30px;
+    color: #777;
+}
+.yeniurunform {
+    background: #F9F9F9;
+    padding: 40px;
+    margin: -140px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    border-radius: 20px;
+    margin-top:-200px;
+}
+.yeniurunform .urunicerik1 {
+    background: #F9F9F9;
+    padding: 25px;
+    margin: 150px 0;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    width: 95%;
+    border: 1px solid #ccc;
+    background: #FFF;
+    margin: 0 0 5px;
+    padding: 10px;
+    border-radius: 15px;
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    font-weight: 100;
+    font-size: 24px;
+    line-height: 30px;
+    color: #0E1119;
+}
+.yeniurunform .urunicerik1:hover {
+    -webkit-transition: border-color 0.3s ease-in-out;
+    -moz-transition: border-color 0.3s ease-in-out;
+    transition: border-color 0.3s ease-in-out;
+    border: 1px solid #aaa;
+}
+.uruneklebuton {
+    cursor: pointer;
+    width: 95%;
+    border: none;
+    background: #4CAF50;
+    color: #FFF;
+    margin: 15px 0 0;
+    padding: 10px;
+   border-radius:15px;
+
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    font-weight: 100;
+    font-size: 24px;
+    line-height: 30px;
+    color: #0E1119;
+}
+.uruneklebuton:hover {
+    background: #43A047;
+    -webkit-transition: background 0.3s ease-in-out;
+    -moz-transition: background 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.uruneklebuton:active {
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+
+.geridonbuton {
+    cursor: pointer;
+    width: 95%;
+    border: none;
+    background: #d9910f;
+    color: #FFF;
+    margin: 15px 0 0;
+    padding: 10px;
+    border-radius: 15px;
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    font-weight: 100;
+    font-size: 24px;
+    line-height: 30px;
+    color: #0E1119;
+    text-decoration:none;
+}
+
+    .geridonbuton:hover {
+        background: #F8B500;
+        -webkit-transition: background 0.3s ease-in-out;
+        -moz-transition: background 0.3s ease-in-out;
+        transition: background-color 0.3s ease-in-out;
+    }
+
+    .geridonbuton:active {
+        box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+    }
+.indbaslik {
+    cursor: pointer;
+    border: none;
+    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    font-size: 30px;
+    color: #0E1119;
+    text-decoration: none;
+}

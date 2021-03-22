@@ -1,0 +1,93 @@
+﻿@using CafeOtomasyon.Models.Entity;
+@model List<Urun>
+@{
+    ViewBag.Title = "Ürünler";
+    Layout = null;
+
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Ürünler</title>
+    <link rel="stylesheet" href="~/Icerik/Urun/css/style.css" />
+</head>
+<body>
+    <header>
+        <a href="~/Admin/Index">
+            <img style="height:530px;width:800px; margin-top:-130px; position:relative;margin-left:760px;" src="~/Icerik/Admin/img/baslik.png" />
+        </a>
+
+    </header>
+
+    <section id="main-content">
+        <section class="wrapper">
+
+           
+                <table class="container2" align="center">
+                    <thead>
+
+                        <tr>
+                            <th>Ürün ID</th>
+                            <th>Ürün Resim</th>
+                            <th>Ürün Adı</th>
+                            <th>Ayrıntı</th>
+                            <th>Kategori</th>
+                            <th>Ürün Fiyatı</th>
+                            <th>Ürün Stok</th>
+                            <th>Sil</th>
+                            <th>Güncelle</th>
+
+                        </tr>
+
+                    </thead>
+                </table>
+
+
+            <table class="container" align="center">
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td><h2>@item.urunID</h2></td>
+                            <td>
+                                <img src="~/Icerik/Images/@item.urunResim" width="162" height="110"/>
+                            </td>
+                            <td><h2>@item.urunAdi</h2></td>
+                            <td><h2>@item.urunAyrinti</h2></td>
+                            <td><h2>@item.urunKategori</h2></td>
+                            <td><h2>@item.urunUcret<a> ₺</a></h2></td>
+                            <td><h2>@item.urunStok</h2></td>
+                            <td><h2>@Html.ActionLink("Sil", "sil", new { id = item.urunID }, new { @class = "sillink", onclick = "return confirm('Ürünü Gerçekten Silmek İstiyor Musunuz?')" })</h2></td>
+                            <td><a href="/Urun/UrunGetir/@item.urunID" class="guncellelink "><h2>GÜNCELLE</h2></a></td>
+                        </tr>
+                        
+                    }
+                </tbody>
+            </table>
+            
+            <table class="container3">
+                <center>
+                    <tr>
+                        <td>
+                            <a href="~/Admin/Index"><img src="~/Icerik/Urun/img/Anasayfa1.jpg" /></a>
+                        </td>
+                        <td>
+                            <a href="/Urun/YeniUrun/"><img src="~/Icerik/Urun/img/Urunekle.jpg" /></a>
+                        </td>
+                        <td>
+                            <a href="~/Giris/Index"><img src="~/Icerik/Urun/img/Cikis2.jpg" /></a>
+
+                        </td>
+                    </tr>
+                </center>
+            </table>
+            
+        </section>
+
+    </section>
+    
+</body>
+</html>

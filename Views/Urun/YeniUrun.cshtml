@@ -1,0 +1,101 @@
+﻿@model CafeOtomasyon.Models.Entity.Urun
+@{
+    ViewBag.Title = "YeniUrun";
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Ürünler</title>
+    <link rel="stylesheet" href="~/Icerik/Urun/css/style.css" />
+</head>
+<body>
+
+    <header>
+        <a href="~/Admin/Index">
+            <img style="height:530px;width:800px; margin-top:-130px; position:relative;margin-left:760px;" src="~/Icerik/Admin/img/baslik.png" />
+        </a>
+
+    </header>
+
+    
+    <section>
+        <section>
+
+            @using (Html.BeginForm("YeniUrun", "Urun", FormMethod.Post, new { enctype = "multipart/Form-data" }))
+            {
+                @Html.AntiForgeryToken()
+              
+                  
+                
+                <div class="form1">
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    
+                    <div class="yeniurunform">
+                       
+                            @Html.ActionLink("Geri Dön", "Index", null, new { @class = "geridonbuton" })
+                        <center>
+                            @Html.ActionLink("Yeni Ürün Ekle", "YeniUrun", null, new { @class = "indbaslik" })
+                        </center>
+                      
+                        <hr />
+                        @Html.LabelFor(model => model.urunResim, "Resim", htmlAttributes: new { })
+                        <br />
+                        @Html.EditorFor(model => model.urunResim, new { htmlAttributes = new { @class = "urunicerik1", @style = "max-width:55%" } })
+                        <input type="file" name="File" />
+                        @Html.ValidationMessageFor(model => model.urunResim, "", new { @class = "text-danger" })
+                        <br />
+
+
+                        @Html.LabelFor(model => model.urunAdi, "Adı", htmlAttributes: new { })
+                        <br />
+                        @Html.EditorFor(model => model.urunAdi, new { htmlAttributes = new { @class = "urunicerik1", @style = "max-width:92%" } })
+                        @Html.ValidationMessageFor(model => model.urunAdi, "", new { @class = "text-danger" })
+                        <br />
+
+
+                        @Html.LabelFor(model => model.urunAyrinti, "Açıklama", htmlAttributes: new { })
+                        <br />
+                        @Html.EditorFor(model => model.urunAyrinti, new { htmlAttributes = new { @class = "urunicerik1", @style = "max-width:92%" } })
+                        @Html.ValidationMessageFor(model => model.urunAyrinti, "", new { @class = "text-danger" })
+                        <br />
+
+
+                        @Html.LabelFor(model => model.urunKategori, "Kategori Adı", htmlAttributes: new { })
+                        <br />
+                        @Html.DropDownList("urunKategori", null, htmlAttributes: new { @class = "urunicerik1" })
+                        @Html.ValidationMessageFor(model => model.urunKategori, "", new { @class = "text-danger" })
+                        <br />
+
+                        @Html.LabelFor(model => model.urunUcret, "Fiyat", htmlAttributes: new { })
+                        <br />
+                        @Html.EditorFor(model => model.urunUcret, new { htmlAttributes = new { @class = "urunicerik1", @style = "max-width:92%" } })
+                        @Html.ValidationMessageFor(model => model.urunUcret, "", new { @class = "text-danger" })
+                        <br />
+
+
+                        @Html.LabelFor(model => model.urunStok, "Stok", htmlAttributes: new { })
+                        <br />
+                        @Html.EditorFor(model => model.urunStok, new { htmlAttributes = new { @class = "urunicerik1", @style = "max-width:92%" } })
+                        @Html.ValidationMessageFor(model => model.urunStok, "", new { @class = "text-danger" })
+                        <br />
+
+
+                        <input type="submit" value="Ürünü Ekle" class="uruneklebuton" />
+
+                        <br />
+                        <hr />
+
+
+
+                    </div>
+                </div>
+            }
+        </section>
+    </section>
+</body>
+</html>

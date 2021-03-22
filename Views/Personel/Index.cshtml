@@ -1,0 +1,81 @@
+﻿@using CafeOtomasyon.Models.Entity;
+@model List<Personel>
+@{
+    ViewBag.Title = "Personeller";
+    Layout = null;
+
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Personeller</title>
+    <link rel="stylesheet" href="~/Icerik/Personel/css/style.css" />
+</head>
+<body>
+    <header>
+        <a href="~/Admin/Index">
+            <img style="height:530px;width:800px; margin-top:-130px; position:relative;margin-left:760px;" src="~/Icerik/Admin/img/baslik.png" />
+        </a>
+
+    </header>
+
+
+    <section id="main-content">
+        <section>
+
+            <table class="container2" align="center">
+                <thead>
+                    <tr>
+
+                        <th>Personel ID</th>
+                        <th>Personel Adı</th>
+                        <th>Personel Soyadı</th>
+                        <th>Personel Telefon</th>
+                        <th>Bölümü</th>
+                        <th>Sil</th>
+                        <th>Güncelle</th>
+
+                    </tr>
+                </thead>
+            </table>
+            <table class="container" align="center">
+                <tbody>
+                    @foreach (var per in Model)
+                    {
+                        <tr>
+                            <td><h1>@per.personelID</h1></td>
+                            <td><h1>@per.personelAd</h1></td>
+                            <td><h1>@per.personelSoyad</h1></td>
+                            <td><h1>@per.personelTelefon</h1></td>
+                            <td><h1>@per.personelBolum</h1></td>
+
+                            <td><h1><a href="/Personel/Sil/@per.personelID" class="sillink"  onclick = "return confirm('Ürünü Gerçekten Silmek İstiyor Musunuz?')">SİL</a></h1></td>
+                            <td><a href="~/Personel/Guncelle/@per.personelID" class="guncellelink"><h1>GÜNCELLE</h1></a></td>
+                        </tr>
+                    }
+                </tbody>
+
+            </table>
+            <table class="container3" align="center">
+                <tr>
+                    <td>
+                        <a href="~/Admin/Index"><img src="~/Icerik/Personel/img/Anasayfa1.jpg" /></a>
+                    </td>
+                    <td>
+                        <a href="/Personel/YeniPersonel/"><img src="~/Icerik/Personel/img/personelekle.jpg" /></a>
+                    </td>
+                    <td>
+                        <a href="~/Giris/Index"><img src="~/Icerik/Personel/img/cikis2.jpg" onclick = "return window.confirm('Çıkış Yapmak İstiyor Musunuz?')"/></a>
+
+                    </td>
+                </tr>
+            </table>
+        </section>
+    </section>
+
+
+</body>
+</html>

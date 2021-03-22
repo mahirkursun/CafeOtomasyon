@@ -1,0 +1,75 @@
+﻿@model CafeOtomasyon.Models.Entity.Urun
+@{
+    ViewBag.Title = "UrunGetir";
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Ürünler</title>
+    <link rel="stylesheet" href="~/Icerik/Urun/css/style.css" />
+</head>
+<body>
+    <header>
+        <a href="~/Admin/Index">
+            <img style="height:530px;width:800px; margin-top:-130px; position:relative;margin-left:760px;" src="~/Icerik/Admin/img/baslik.png" />
+        </a>
+
+    </header>
+
+    <section >
+        <section >
+            @using (Html.BeginForm("Guncelle", "Urun", FormMethod.Post))
+            {
+            
+                
+                <div class="guncelleform">
+                    <div class="containerguncelle">
+
+
+                        @Html.ActionLink("Geri Dön", "Index", null, new { @class = "geridonbuton" })
+                        <center>
+                            @Html.ActionLink("Ürün Güncelle", "UrunGetir", null, new { @class = "indbaslik" })
+                        </center>
+                        <center>
+                            <hr />
+
+                            @Html.LabelFor(m => m.urunID)
+                            @Html.TextBoxFor(m => m.urunID, new { @class = "urunicerik" })
+                            <br />
+                            @Html.LabelFor(m => m.urunAdi)
+                            @Html.TextBoxFor(m => m.urunAdi, new { @class = "urunicerik" })
+                            <br />
+                            @Html.LabelFor(m => m.urunAyrinti)
+                            @Html.TextBoxFor(m => m.urunAyrinti, new { @class = "urunicerik" })
+                            <br />
+                            @Html.LabelFor(m => m.urunKategori)
+                            @Html.TextBoxFor(m => m.urunKategori, new { @class = "urunicerik" })
+                            <br />
+                            @Html.LabelFor(m => m.urunUcret)
+                            @Html.TextBoxFor(m => m.urunUcret, new { @class = "urunicerik" })
+                            <br />
+                            @Html.LabelFor(m => m.urunStok)
+                            @Html.TextBoxFor(m => m.urunStok, new { @class = "urunicerik" })
+                            <button class="guncellebuton">Ürün Güncelle</button>
+
+                            <br />
+                            <hr />
+                        </center>
+                    </div>
+                    
+                </div>
+            
+                
+
+            }
+
+
+        </section>
+    </section>
+</body>
+</html>
