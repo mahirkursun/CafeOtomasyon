@@ -32,9 +32,11 @@ Kilitle seçeneği ile sayfadan çıkış yapılır ve giriş sayfasına gider. 
 <br />
     </td>
  </tr>
+ 
  <tr>
     <td><img src="https://github.com/mahirkursun/CafeOtomasyon/blob/main/img/Picture3.png" alt="Your image title" /></td>
  </tr>
+ 
   <tr>
     <td>
       Bu sayfada veritabanı ndan çekilen ürünlerin kaydı tutulur.Ürün silebilir ve silmeden önce “Silmek istediğinizden emin misiniz?” diye uyarı verilir, onay verilirse ürün silinir. Yeni ürün ekleyebilir ve ürünü güncelleyebilir.
@@ -73,9 +75,11 @@ Kilitle seçeneği ile sayfadan çıkış yapılır ve giriş sayfasına gider. 
       <br />
     </td>
  </tr>
+ 
  <tr>
     <td><img src="https://github.com/mahirkursun/CafeOtomasyon/blob/main/img/Picture7.png" alt="Your image title" /></td>
  </tr>
+ 
  <tr>
     <td>
       Bu sayfadaki cafede çalışan personellerin listesi listelenir, Personel silme yapılır. Çıkış butonu ile sayfadan çıkış yapılır.
@@ -83,9 +87,11 @@ Kilitle seçeneği ile sayfadan çıkış yapılır ve giriş sayfasına gider. 
       <br />
     </td>
  </tr>
+ 
  <tr>
     <td><img src="https://github.com/mahirkursun/CafeOtomasyon/blob/main/img/Picture8.png" alt="Your image title" /></td>
  </tr>
+ 
  <tr>
     <td>
       Sistemde verilerin tutulması ve işlenmesi için veri tabanı kullanılmaktadır. Veri tabanında 6 tablo bulunmaktadır.
