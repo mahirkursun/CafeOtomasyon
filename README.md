@@ -53,7 +53,7 @@ Kilitle seçeneği ile sayfadan çıkış yapılır ve giriş sayfasına gider. 
       Bu sayfada ürünlerde seçili olan ürünün güncellemesi yapılır. Ürün Güncelle butonuna basıldığında ürünler tablosu yenilenir.
       <br />
       <br />
-   </td>
+   </td> 
  </tr>
  <tr>
     <td><img src="https://github.com/mahirkursun/CafeOtomasyon/blob/main/img/Picture5.png" alt="Your image title" /></td>
